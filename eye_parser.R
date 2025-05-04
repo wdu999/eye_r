@@ -415,12 +415,37 @@ f4_roll_ref <- function() {
   htmlwidgets::saveWidget(ggp, html_name)
   message("save to ", html_name)
 }
-f5_remove_2T <- function() {
-  # remove 1T samples from beginning and 1T in the end
-  # to solve the problem that ref may have more zero crossing in the beginning and/or in the end
-  format_message("f5: remove 1T leading samples and 1T ending samples")
-  df_ref <<- df_ref[(OS + 1):(nrow(df_ref) - OS), ]
-  df_wfm <<- df_wfm[(OS + 1):(nrow(df_wfm) - OS), ]
+f5_remove_leading_trailing_samples <- function() {
+  # remove leading and/or trailing samples
+  # to solve the problem that ref/wfm may have more zero crossing than the other one
+  format_message("f5: remove leading and/or trailing samples")
+
+  n <- OS / 2
+
+  x <- 1:n
+  ref <- df_ref$V[x]
+  wfm <- df_wfm$V[x]
+
+  if ((sign(ref[1]) * sign(ref[n])) != (sign(wfm[1]) * sign(wfm[n]))) {
+    message("remove leading 0.5T samples due to ref or wfm have more zero crossing than the other")
+    matplot(x, cbind(ref, wfm), type = "b", pch = 1, col = 1:2)
+    legend("topright", legend = c("ref", "wfm"), pch = 1, col = 1:2)
+    df_ref <<- df_ref[(n + 1):nrow(df_ref), ]
+    df_wfm <<- df_wfm[(n + 1):nrow(df_wfm), ]
+  }
+
+  x <- (nrow(df_ref) - n + 1):nrow(df_ref)
+  ref <- df_ref$V[x]
+  wfm <- df_wfm$V[x]
+
+  if ((sign(ref[1]) * sign(ref[n])) != (sign(wfm[1]) * sign(wfm[n]))) {
+    message("remove trailing 0.5T samples due to ref or wfm have more zero crossing than the other")
+    matplot(x, cbind(ref, wfm), type = "b", pch = 1, col = 1:2)
+    legend("topright", legend = c("ref", "wfm"), pch = 1, col = 1:2)
+    df_ref <<- df_ref[1:(nrow(df_ref) - n), ]
+    df_wfm <<- df_wfm[1:(nrow(df_wfm) - n), ]
+  }
+
 }
 f6_find_zero_crossing <- function() {
   format_message("f6: find zero crossing")
@@ -809,7 +834,7 @@ f1_view_raw_ref()
 f2_upsample()
 f3_detect_pattern()
 f4_roll_ref()
-f5_remove_2T()
+f5_remove_leading_trailing_samples()
 f6_find_zero_crossing()
 f7_gen_tie()
 f8_gen_eye_db()
