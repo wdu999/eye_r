@@ -1,0 +1,401 @@
+tags	V
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+7T - 6T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+NA	1
+6T - 1T	1
+1T - 5T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+5T - 2T	1
+NA	-1
+2T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 5T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+5T - 1T	-1
+1T - 1T	1
+1T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 3T	1
+NA	-1
+NA	-1
+3T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 3T	-1
+NA	1
+NA	1
+3T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 7T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+7T - 6T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+NA	1
+6T - 1T	1
+1T - 5T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+5T - 2T	1
+NA	-1
+2T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 5T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+5T - 1T	-1
+1T - 1T	1
+1T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 3T	1
+NA	-1
+NA	-1
+3T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 3T	-1
+NA	1
+NA	1
+3T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 7T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+7T - 6T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+NA	1
+6T - 1T	1
+1T - 5T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+5T - 2T	1
+NA	-1
+2T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 5T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+5T - 1T	-1
+1T - 1T	1
+1T - 4T	-1
+NA	1
+NA	1
+NA	1
+4T - 3T	1
+NA	-1
+NA	-1
+3T - 3T	-1
+NA	1
+NA	1
+3T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 4T	1
+NA	-1
+NA	-1
+NA	-1
+4T - 1T	-1
+1T - 2T	1
+NA	-1
+2T - 3T	-1
+NA	1
+NA	1
+3T - 2T	1
+NA	-1
+2T - 1T	-1
+1T - 1T	1
+1T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 1T	-1
+1T - 3T	1
+NA	-1
+NA	-1
+3T - 2T	-1
+NA	1
+2T - 2T	1
+NA	-1
+2T - 2T	-1
+NA	1
+2T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 1T	1
+1T - 1T	-1
+1T - 7T	1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+NA	-1
+7T - 6T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+NA	1
+6T - 1T	1
+1T - 5T	-1
+NA	1
+NA	1
+NA	1
+NA	1
+5T - 2T	1
