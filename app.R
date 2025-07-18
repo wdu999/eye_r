@@ -39,11 +39,11 @@ t_eye_tags <- read_tsv(
 ) |>
   pull(tags)
 
-t_eye_db <- read_tsv(
+t_eye_db <- as.matrix(read_tsv(
   here("02_results", glue("{prefix}_eye_db.txt")),
   col_names = T,
   show_col_types = F
-)
+))
 
 t_eye_i <- as.matrix(read_tsv(
   here("02_results", glue("{prefix}_eye_db_i.txt")),
@@ -51,11 +51,12 @@ t_eye_i <- as.matrix(read_tsv(
   show_col_types = F
 ))
 
-t_eye_db_long <- t_eye_db |>
-  mutate(T = t_eye_t) |>
-  pivot_longer(cols = -T, names_to = "UIs") |>
-  mutate(tags = rep(t_eye_tags, nrow(t_eye_db))) |>
-  fill(tags, .direction = "up")
+t_eye_db_long <- tibble(
+  T = rep(t_eye_t, ncol(t_eye_db)),
+  UIs = rep(1:ncol(t_eye_db), each = nrow(t_eye_db)),
+  tags = rep(t_eye_tags, each = nrow(t_eye_db)),
+  value = c(t_eye_db)
+)
 
 available_tags <- setdiff(unique(t_eye_db_long$tags), NA)
 
@@ -126,7 +127,7 @@ server <- function(input, output, session) {
   #   if (eye_max_ui() == eye_min_ui()) {
   #     matplot(
   #       t_eye_t,
-  #       as.matrix(t_eye_db)[, eye_max_ui()],
+  #       t_eye_db[, eye_max_ui()],
   #       type = "l",
   #       lty = 1,
   #       col = alpha("firebrick2"),
@@ -137,7 +138,7 @@ server <- function(input, output, session) {
   #   } else {
   #     matplot(
   #       t_eye_t,
-  #       as.matrix(t_eye_db)[, eye_min_ui():(eye_max_ui() - 1)],
+  #       t_eye_db[, eye_min_ui():(eye_max_ui() - 1)],
   #       type = "l",
   #       lty = 1,
   #       col = alpha("gray", 0.6),
@@ -146,7 +147,7 @@ server <- function(input, output, session) {
   #     )
   #     lines(
   #       t_eye_t,
-  #       as.matrix(t_eye_db)[, eye_max_ui()],
+  #       t_eye_db[, eye_max_ui()],
   #       type = "l",
   #       lty = 1,
   #       lwd = 2,
@@ -158,7 +159,9 @@ server <- function(input, output, session) {
   eye_plot <- reactive({
     if (eye_max_ui() == eye_min_ui()) {
       ggplot(
-        t_eye_db_long |> filter(as.numeric(UIs) == eye_max_ui()),
+        t_eye_db_long |>
+          filter(UIs == eye_max_ui()) |>
+          mutate(UIs = factor(UIs)),
         aes(x = T, y = value, color = UIs)
       ) +
         geom_line(linewidth = 2) +
@@ -169,15 +172,15 @@ server <- function(input, output, session) {
     } else {
       ggplot(
         t_eye_db_long |>
-          filter(
-            as.numeric(UIs) >= eye_min_ui() & as.numeric(UIs) < eye_max_ui()
-          ),
+          filter(UIs >= eye_min_ui() & as.numeric(UIs) < eye_max_ui()) |>
+          mutate(UIs = factor(UIs)),
         aes(x = T, y = value, color = UIs)
       ) +
         geom_line(alpha = 0.6) +
         scale_color_manual(values = rep("gray", eye_max_ui() - eye_min_ui())) +
         geom_line(
-          data = t_eye_db_long |> filter(as.numeric(UIs) == eye_max_ui()),
+          data = t_eye_db_long |>
+            filter(UIs == eye_max_ui()),
           aes(x = T, y = value),
           linewidth = 2,
           color = color
@@ -215,9 +218,11 @@ server <- function(input, output, session) {
 
   eye_plot_by_tags <- reactive(
     {
-      df <- t_eye_db_long |> filter(tags %in% input$tags)
+      df <- t_eye_db_long |>
+        filter(tags %in% input$tags) |>
+        mutate(UIs = factor(UIs))
       ggplot(
-        df,
+        df |> mutate(tags = factor(tags, input$tags)),
         aes(x = T, y = value, color = tags, linetype = UIs)
       ) +
         geom_line(alpha = 0.6) +

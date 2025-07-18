@@ -25,8 +25,8 @@ OS <- Fs / F
 
 prbs_length <- NA
 df_ref_raw_with_tags <- NA
-eye_window_length_l <- 0.8 # first 0.8T in eye window
-eye_window_length_r <- 0.8 # second 0.8T in eye window
+eye_window_length_l <- 1
+eye_window_length_r <- 1
 
 df_wfm_raw <- NULL
 df_wfm <- NULL
